@@ -1,5 +1,5 @@
 # Site settings
-title: MPG Portfolio
+title: "MPG Portfolio"
 email:
 description: > "Data Science Portfolio"
 baseurl: "" # the subpath of your site, e.g. /blog/
