@@ -1,12 +1,12 @@
 # Site settings
 title: 
-email:
+email:micgonzalez@my365.bellevue.edu
 description: > # the subpath of your site, e.g. /blog/
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+url: "https://micgonzalez.github.io" # the base hostname & protocol for your site
 
 twitter_username:
-github_username:
+github_username:micgonzalez
 
 # Build settings
 markdown: kramdown
