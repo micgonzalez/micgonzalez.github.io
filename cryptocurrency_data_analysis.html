@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>
+body {background-color: beige;
+      font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+}
+
+p {
+  color: black;
+  font-size: 20px;
+  text-align: justify;
+}
+
+footer {
+  color: black;
+  text-align: center;
+}
+
+</style>
+<body>
+
+<h1>Data Analysis on Cryptocurrency Prices</h1>
+<p>Looking for insights from the top cryptocurrencies. The dataset was acquired by the <a href="https://www.coingecko.com/" target="_blank"><b>CoinGecko Exchange</b></a>. This is a good start to display the flexibility of using Javascript version of Plotly (Plotly.js). Plotly.js allows you to display charts in web2 website that can be updated quickly. I plan to look for the highest valued and lowest valued cryptocurrenices. I'm also planning to look for the cryptocurrencies with highest and lowest price value within 24 hours. Thank you for taking a look at charts created with Javascript.</p>
+<br>
+<br>
+<br>
+<br>
+<h2>Five Highest Valued Cryptocurrencies</h2>
+
+<center><div id="topFive" style="width:100%;max-width:700px"></div>
+
+<script>
+var xArray = [42231557270, 48925642603, 70696786557, 199011159995, 463048740713];
+var yArray = ["USD Coin", "Binance", "Tether", "Ethereum", "Bitcoin"];
+
+var data = [{
+  x:xArray,
+  y:yArray,
+  type:"bar",
+  orientation:"h",
+  marker: {color: ["blue", "yellow", "green", "gray", "orange"]},
+}];
+
+var layout = {title:"", 
+  xaxis: {title: "Market Cap Value in Billions (USD)"}};
+
+Plotly.newPlot("topFive", data, layout);
+</script>
+</center>
+<br>
+<br>
+<p>In the above chart, you can see that Bitcoin is the cryptocurrency with the highest market cap. After Bitcion, you can see a drastic drop that leads to Ethereum. Tether has a much smaller market cap compared to Ethereum. Binance has little smaller market cap compared to Tether. Moving to the bottom of the chart is USD Coin, which the market cap is lower than the previous cryptocurrency.</p>
+<br>
+<br>
+<br>
+<br>
+<h2>Five Lowest Valued Cryptocurrencies</h2>
+
+<center><div id="bottomFive" style="width:100%;max-width:700px"></div>
+
+<script>
+var xArray = [8.09, 4.25, 3.01, 1.67, 0.41];
+var yArray = ["Graft", "Onespace", "HaloDAO", "Tokoin", "HOdlcoin"];
+
+var data = [{
+  x:xArray,
+  y:yArray,
+  type:"bar",
+  orientation:"h",
+  marker: {color: ["pink", "purple", "red", "black", "cyan"]},
+}];
+
+var layout = {title:"",
+  xaxis: {title: "Market Cap Value less than $10 Dollars (USD)"}};
+
+Plotly.newPlot("bottomFive", data, layout);
+</script>
+</center>
+<br>
+<br>
+<p>In the above chart, we are looking of the cryptocurrencies with the lowest market cap. HOdlcoin is the cryptocurrency with the lowest market cap. After HOdlcion, you can see a large jump that leads to Tokoin. HaloDAO has a small jump market cap compared to Tokio. Onespace has huge jump of market cap compared to HaloDAO. Lastly Graft has the largest measure of the lowest market cap.</p>
+<br>
+<br>
+<br>
+<br>
+<h2>Price Change of Cryptocurrencies in 24 Hours (USD)</h2>
+
+<center><div id="priChange" style="width:100%;max-width:700px"></div>
+
+<script>
+var data = [
+
+        {
+
+            name: "2023",
+
+            type: "waterfall",
+
+            orientation: "v",
+
+            measure: [
+
+                "relative",
+
+                "relative",
+
+                "total",
+
+                "relative",
+
+                "relative",
+
+                "total"
+
+            ],
+
+            x: [
+
+                "OKC",
+
+                "Tokenize Xchange",
+
+                "Optimism",
+
+                "NEO",
+
+                "Rocket Pool",
+
+                "Tezos"
+
+            ],
+
+            textposition: "inside",
+
+            text: [
+
+                "1.018",
+
+                "0.27",
+
+                "0.24",
+
+                "-1.28",
+
+                "-1.07",
+
+                "-0.12"
+
+            ],          
+
+            y: [
+
+               1.018,
+
+               0.27,
+
+                0.24,
+
+                -1.28,
+
+                -1.07,
+
+                -0.12
+
+            ],
+
+            connector: {
+
+              line: {
+
+                color: "rgb(63, 63, 63)"
+
+              }
+
+            },
+
+        }
+
+    ];
+
+ layout = {
+
+        title: {
+
+            text: ""
+
+        },
+
+        xaxis: {
+
+            type: "category"
+
+        },
+
+        yaxis: {
+
+            type: "linear"
+
+        },
+
+        autosize: true,
+
+        showlegend: true
+
+    };
+
+Plotly.newPlot('priChange', data, layout);
+</script>
+</center>
+<br>
+<br>
+<p>In the above chart, we are looking of the cryptocurrencies with the highest or lowest price value within 24  hours. OKC is the cryptocurrency with the highest price value within 24 hours. Next, Tokenize Xchange has a small bump in the price value going in the up direction. Optimism has a small jump in price value but, it wasn't high as Tokenize Xchange. NEO had largest dump of price value.Rocket Pool also had a large dump of price value, but not as much compared to NEO. Tezos had the lowest dump of price value with 24 hours.</p>
+<br>
+<br>
+<br>
+<br>
+<footer>&copy; 2023 Michael P Gonzalez</footer>
+</body>
+</html>
